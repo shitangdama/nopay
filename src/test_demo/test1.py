@@ -1,12 +1,11 @@
 # from __future__ import print_function
 # from __future__ import absolute_import
 import time
-
 import numpy as np
 import pandas as pd
 
 # import jaqs.trade.analyze as ana
-# from jaqs.data import RemoteDataService
+from test_demo.rjaqs.data.dataservice import RemoteDataService
 # from jaqs.data import DataView
 
 from test_demo.config.config import data_config, trade_config
@@ -17,7 +16,7 @@ dataview_dir_path = './output/test/dataview'
 backtest_result_dir_path = './output/Graham'
 
 def date_test():
-    # ds = RemoteDataService()
+    ds = RemoteDataService()
     ds.init_from_config(data_config)
 
 
