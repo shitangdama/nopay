@@ -1,0 +1,4 @@
+需要先阅读代码。需要重写部分代码。
+使用jaqs_fxdayu
+对add_formula看看是否可以改动一下
+改动成一个filter
