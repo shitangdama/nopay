@@ -145,6 +145,7 @@ def get_ic_weight(dv):
     return IC_weight_Panel
 
 
+# 这里进行正交感觉不是很好
 def Schmidt(data):
     """
     :param data: DataFrame containing all factors, with stock code as index and factor value as column
