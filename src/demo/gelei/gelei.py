@@ -21,8 +21,8 @@ import numpy as np
 import pandas as pd
 
 import jaqs.trade.analyze as ana
-from jaqs_fxdayu.data import RemoteDataService
-from jaqs_fxdayu.data import DataView
+from jaqs.data import RemoteDataService
+from jaqs.data import DataView
 from jaqs.trade import model
 from jaqs.trade import AlphaBacktestInstance
 from jaqs.trade import AlphaTradeApi
@@ -40,7 +40,7 @@ def test_save_dataview():
     ds.init_from_config(data_config)
     dv = DataView()
     
-    props = {'start_date': 20171001, 'end_date': 20180330, 'universe': '000905.SH',
+    props = {'start_date': 20180101, 'end_date': 20180330, 'universe': '000905.SH',
              'fields': ('tot_cur_assets,tot_cur_liab,inventories,pre_pay,deferred_exp,'
                         'eps_basic,ebit,pe,pb,float_mv,sw1'),
              'freq': 1}
@@ -112,9 +112,11 @@ def test_alpha_strategy_dataview():
     }
     props.update(data_config)
     props.update(trade_config)
-    
+    # 交易api
     trade_api = AlphaTradeApi()
 
+    # 选股模型
+    # 关于StockSelector
     stock_selector = model.StockSelector()
     stock_selector.add_filter(name='myselector', func=my_selector)
     
@@ -149,9 +151,9 @@ def test_backtest_analyze():
 
 
 if __name__ == "__main__":
-    t_start = time.time()
-    test_save_dataview()
+    # t_start = time.time()
+    # test_save_dataview()
     test_alpha_strategy_dataview()
-    test_backtest_analyze()
-    t3 = time.time() - t_start
-    print("\n\n\nTime lapsed in total: {:.1f}".format(t3))
+    # test_backtest_analyze()
+    # t3 = time.time() - t_start
+    # print("\n\n\nTime lapsed in total: {:.1f}".format(t3))
