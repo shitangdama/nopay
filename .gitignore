@@ -1,4 +1,9 @@
-example
-JAQS
-/config
-/output
+/example
+/JAQS
+/rqalpha
+/jaqs-fxdayu
+/backtest
+__pycache__
+config
+output
+jaqs
