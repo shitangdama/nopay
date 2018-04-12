@@ -119,11 +119,9 @@ class HistoricCSVDataHandler(DataHandler):
                 os.path.join(self.csv_dir, '%s.csv' % s),
                 header=0, index_col=0, parse_dates=True,
                 names=[
-                    'datetime', 'open', 'high',
-                    'low', 'close', 'volume'
-                    # , 'adj_close'
+                    "Open","High","Low","Close","Volume","Adj Close"
                 ]
-            ).sort()
+            ).sort_index()
 
             # Combine the index to pad forward values
             if comb_index is None:
