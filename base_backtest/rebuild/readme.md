@@ -15,6 +15,10 @@ calculate_signals函数
 可以扩展这个函数分割成aop
 有个centext是历史数据
 
-也就是说backtest类是喂数据，管理strategy和portfolio以及其他莫狂
+也就是说backtest类是喂数据，管理strategy和pm
 
-stragegy会通过ic因子来判断一份名单，提供给后面的
+关于bar的设计
+
+这里将bar设计成一个工具类
+暂时不设计择时
+这里这里最好设计成一个通用的dataview
