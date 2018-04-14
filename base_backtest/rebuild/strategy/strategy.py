@@ -23,5 +23,9 @@ class Strategy(object):
 class AlphaStrategy(Strategy):
     pass
 
+
+
+# 在多因子情况下，考虑两个时刻
+# 一个开盘价，一个收盘价
 class EventDrivenStrategy(Strategy):
     pass
