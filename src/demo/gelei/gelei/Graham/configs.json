@@ -1,0 +1,12 @@
+{"remote.data.address": "tcp://data.tushare.org:8910",
+"remote.trade.password": "eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVfdGltZSI6IjE1MjI0MjUxMzgwNjIiLCJpc3MiOiJhdXRoMCIsImlkIjoiMTM1NjQ1NDIxNDUifQ.eDmGunsBAch6Q4IUJJIFKl6z01esSijBHkv6U1EZHoA",
+"start_date": 20180101,
+"remote.trade.address": "tcp://gw.quantos.org:8901",
+"position_ratio": 1.0,
+"end_date": 20180330,
+"remote.data.username": "13564542145",
+"init_balance": 100000000.0,
+"period": "day",
+"remote.data.password": "eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVfdGltZSI6IjE1MjI0MjUxMzgwNjIiLCJpc3MiOiJhdXRoMCIsImlkIjoiMTM1NjQ1NDIxNDUifQ.eDmGunsBAch6Q4IUJJIFKl6z01esSijBHkv6U1EZHoA",
+"remote.trade.username": "13564542145",
+"days_delay": 1}
