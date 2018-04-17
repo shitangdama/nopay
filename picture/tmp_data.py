@@ -2,6 +2,7 @@
 # 输出一个csv
 import pandas as pd
 import tushare as ts
+import time
 
 #####################################
 # 沪深300
@@ -15,20 +16,18 @@ import tushare as ts
 ###########################
 sz30 = pd.read_csv("./input/sz30.csv")
 all_stock_data = []
-
+stop_stock = ["600485"]
 
 
 count = 0
 for index, row in sz30.iterrows():
-    
     # print(row["code"])
+
     code = str(row.code).zfill(6)
-    print(code in stop_stock)
     if code in stop_stock:
-        
         continue
     print("开始获取"+ code)
-    stock_data = ts.get_k_data(code, start='2017-06-02', end='2018-04-13')
+    stock_data = ts.get_k_data(code, start='2017-11-01', end='2018-04-13')
     stock_data.index = pd.to_datetime(stock_data.date, format='%Y-%m-%d')
     stock_data = stock_data.drop(["date"], axis=1)
     stock_data["code"] = code
@@ -36,8 +35,9 @@ for index, row in sz30.iterrows():
     print(count)
     count = count + 1
     all_stock_data.append(stock_data)
+    time.sleep(0.5)
 result = pd.concat(all_stock_data)
-result.to_csv("./input/sz_result.csv")
+result.to_csv("./input/sz50_result.csv")
 #################################
 
 # print(ts.get_k_data("600000"))

@@ -18,7 +18,6 @@ data = pd.read_csv("./input/tmp_002049.csv")
 
 # data.index = pd.to_datetime(data.date, format='%Y-%m-%d')
 
-
 # 两个函数一个是diff，一个是shift
 # pandas在移动时候多用平移方案
 # 或者是对index进行操作，
